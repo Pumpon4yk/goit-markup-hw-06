@@ -794,8 +794,9 @@ textarea{
   position: relative;
   display: flex;
   align-items: center;
-  margin: 0 auto 30px;
-  gap: 8px;
+  padding-left: 13px;
+  margin-bottom: 30px;
+  gap: 7px;
 
   cursor: pointer;
 }
