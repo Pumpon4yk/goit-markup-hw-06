@@ -581,7 +581,8 @@ button {
   transition: border-color var(--anim-time) var(--animation-timing-function);
 }
 
-.imp-mail-footer:focus-within{
+.imp-mail-footer:focus-within,
+.imp-mail-footer:hover{
   border: 1px solid var(--blue-color);
 }
 
