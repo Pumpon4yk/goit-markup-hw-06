@@ -676,10 +676,14 @@ button {
   background-color: var(--white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  transition: fill var(--anim-time) var(--animation-timing-function);
 }
 
 .icon-x{
   display: block;
+
+  transition: fill var(--anim-time) var(--animation-timing-function);
 }
 
 .btn-x:hover .icon-x,
@@ -718,11 +722,13 @@ textarea{
   cursor: pointer;
   outline: none;
 
-  transition: order-color var(--anim-time) var(--animation-timing-function);
+  transition: border-color var(--anim-time) var(--animation-timing-function);
 }
 
 .form-modal input:focus-within,
-.form-modal textarea:focus-within{
+.form-modal input:hover,
+.form-modal textarea:focus-within,
+.form-modal textarea:hover{
   border-color: var(--blue-color);
 }
 
@@ -746,7 +752,8 @@ textarea{
   transition: fill var(--anim-time) var(--animation-timing-function);
 }
 
-.form-label-cont:focus-within .icon-form-cont{
+.form-label-cont:focus-within .icon-form-cont,
+.form-label-cont:hover .icon-form-cont{
   fill: var(--blue-color);
 }
 
@@ -784,6 +791,8 @@ textarea{
   outline: none;
 
   cursor: pointer;
+
+  transition: border-color var(--anim-time) var(--animation-timing-function);
 }
 
 .feedback-form:not(:placeholder-shown){
@@ -794,7 +803,7 @@ textarea{
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: 13px;
+  margin: 0 auto;
   margin-bottom: 30px;
   gap: 7px;
 
@@ -815,7 +824,6 @@ textarea{
 
 .icon-check{
   position: absolute;
-
   fill: var(--white-color);
   background-color: var(--blue-color);
 
@@ -837,6 +845,12 @@ textarea{
   border: 2px solid var(--black-color);
   border-radius: 2px;
 
+  transition: border-color var(--anim-time) var(--animation-timing-function);
+}
+
+.label-checkbox:focus-within .icon-checkbox,
+.label-checkbox:hover .icon-checkbox{
+  border-color: var(--blue-color);
 }
 
 .policy-text{
