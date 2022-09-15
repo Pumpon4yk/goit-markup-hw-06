@@ -846,19 +846,21 @@ textarea{
   padding: 0;
   border: 2px solid var(--black-color);
   border-radius: 2px;
-
-  transition: border-color var(--anim-time) var(--animation-timing-function);
+  outline: transparent;
+  transition: outline var(--anim-time) var(--animation-timing-function);
 }
 
-.label-checkbox:focus-within .icon-checkbox,
-.label-checkbox:hover .icon-checkbox{
-  border-color: var(--blue-color);
+.checkbox:focus ~ .icon-checkbox,
+.checkbox:hover ~ .icon-checkbox{
+  outline: 2px solid var(--blue-color);
 }
 
 .policy-text{
   font-size: 14px;
   line-height: 1.71;
-  color: var(--grey-color)
+  color: var(--grey-color);
+
+  user-select: none;
 }
 
 .policy{
